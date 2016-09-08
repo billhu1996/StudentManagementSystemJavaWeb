@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="defult" namespace="/" extends="struts-default">
+        <action name="user" class="structs.userAction">
+            <result name="loginSuccess" type="redirect">showStudent.action</result>
+        </action>
+        <action name="showStudent" class="structs.showStudentAction">
+            <result name="success" type="dispatcher">/success.jsp</result>
+        </action>
+        <action name="deleteAction" class="structs.deleteAction">
+            <result name="success" type="dispatcher">showStudent.action</result>
+        </action>
+
+    </package>
+</struts>
